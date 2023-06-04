@@ -1,5 +1,5 @@
 const ContributionsDAO = require("../data/contributions-dao").ContributionsDAO;
-const {
+const { 
     environmentalScripts
 } = require("../../config/config");
 
