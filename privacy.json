@@ -1,0 +1,58 @@
+{
+    "subjects": [
+        {
+            "subject_name": "User",
+            "name": "Email Address",
+            "detection_count": 2,
+            "critical_risk_failure_count": 0,
+            "high_risk_failure_count": 0,
+            "medium_risk_failure_count": 0,
+            "low_risk_failure_count": 0,
+            "rules_passed_count": 21
+        },
+        {
+            "subject_name": "User",
+            "name": "Passwords",
+            "detection_count": 4,
+            "critical_risk_failure_count": 0,
+            "high_risk_failure_count": 0,
+            "medium_risk_failure_count": 0,
+            "low_risk_failure_count": 0,
+            "rules_passed_count": 21
+        },
+        {
+            "subject_name": "User",
+            "name": "Username",
+            "detection_count": 4,
+            "critical_risk_failure_count": 0,
+            "high_risk_failure_count": 0,
+            "medium_risk_failure_count": 0,
+            "low_risk_failure_count": 0,
+            "rules_passed_count": 21
+        },
+        {
+            "subject_name": "Unknown",
+            "name": "Fullname",
+            "detection_count": 1,
+            "critical_risk_failure_count": 0,
+            "high_risk_failure_count": 0,
+            "medium_risk_failure_count": 0,
+            "low_risk_failure_count": 0,
+            "rules_passed_count": 21
+        }
+    ],
+    "third_party": [
+        {
+            "third_party": "GitHub",
+            "subject_name": "Unknown",
+            "data_types": [
+                "Unknown"
+            ],
+            "critical_risk_failure_count": 0,
+            "high_risk_failure_count": 0,
+            "medium_risk_failure_count": 0,
+            "low_risk_failure_count": 0,
+            "rules_passed_count": 0
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+[32m2023-06-11 13:15:34[0m [1mStarted Running on tenant_id='<unknown>', control_type='detection', trace_id='048500ca-04f6-44d6-a7b4-c083c89b68ad', fail_on_findings=False[0m
+[32m2023-06-11 13:15:34[0m [1mEVENT environment variable is not set[0m
+[32m2023-06-11 13:15:34[0m [33m[1mWe are running without backend[0m
+[32m2023-06-11 13:15:34[0m [1mProcessing control[0m
+[32m2023-06-11 13:15:34[0m [1mTrying to add skip tests to command[0m
+[32m2023-06-11 13:15:34[0m [1mNo skip tests format found in environment[0m
+[32m2023-06-11 13:15:34[0m [1mTrying to add skip paths to command[0m
+[32m2023-06-11 13:15:34[0m [1mNo skip paths format found in environment[0m
+[32m2023-06-11 13:15:34[0m [1mGetting feature flag value for feature_flag_key='entrypoint-better-control-error-logging', payload={'key': '<unknown>', 'custom': {'control_name': 'snyk'}}[0m
+[32m2023-06-11 13:15:34[0m [1mLocal feature flag: local_test_value=False[0m
+[32m2023-06-11 13:15:34[0m [1mNo config file found[0m
+[32m2023-06-11 13:15:34[0m [1mExecuting on folders: [PosixPath('.')][0m
+[32m2023-06-11 13:15:34[0m [1mNo scripts path was provided[0m
+[32m2023-06-11 13:15:34[0m [1mExecuting in multiple directories[0m
+[32m2023-06-11 13:15:34[0m [1mExecuting command. command='snyk code test --json' raw_report_file=None cwd=PosixPath('/code') env={'WORK_DIR': '/code'} timeout=None[0m
+[32m2023-06-11 13:15:37[0m [1mCommand returned status code 3[0m
+[32m2023-06-11 13:15:37[0m [1mRemoving code path from path=PosixPath('/code')[0m
+[32m2023-06-11 13:15:37[0m [1mFinished executing in multiple directories[0m
+[32m2023-06-11 13:15:37[0m [1mReturn value for execution number 0: NoSupportedSastFiles: We found 0 supported files 
+Please see our documentation for Snyk Code language and framework support
+https://docs.snyk.io/products/snyk-code/snyk-code-language-and-framework-support
+    at Object.test (/usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/lib/plugins/sast/index.ts:44:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.testEcosystem (/usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/lib/ecosystems/test.ts:24:60)
+    at test (/usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/cli/commands/test/index.ts:130:29)
+    at runCommand (/usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:51:25)
+    at main (/usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:294:11)
+    at /usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/cli/index.ts:13:3
+    at Object.callHandlingUnexpectedErrors (/usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/lib/unexpected-error.ts:28:5)
+, exit_code: 0, cwd: .[0m
+[32m2023-06-11 13:15:37[0m [1m================Stdout for execution #0================
+NoSupportedSastFiles: We found 0 supported files 
+Please see our documentation for Snyk Code language and framework support
+https://docs.snyk.io/products/snyk-code/snyk-code-language-and-framework-support
+    at Object.test (/usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/lib/plugins/sast/index.ts:44:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.testEcosystem (/usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/lib/ecosystems/test.ts:24:60)
+    at test (/usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/cli/commands/test/index.ts:130:29)
+    at runCommand (/usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:51:25)
+    at main (/usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/cli/main.ts:294:11)
+    at /usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/cli/index.ts:13:3
+    at Object.callHandlingUnexpectedErrors (/usr/local/lib/node_modules/snyk/dist/cli/webpack:/snyk/src/lib/unexpected-error.ts:28:5)
+[0m
+[32m2023-06-11 13:15:37[0m [1m================Stderr for execution #0================
+[0m
+[32m2023-06-11 13:15:37[0m [1mFinished running 1 executions[0m
+[32m2023-06-11 13:15:37[0m [1mParsing results for control_type='detection' control[0m
+[32m2023-06-11 13:15:37[0m [1mparsing detection control results for 1 execution results[0m
+[32m2023-06-11 13:15:37[0m [1mParsing result for execution on .[0m
+[32m2023-06-11 13:15:37[0m [1mLoading the pipeline {'cwd': ''}.[0m
+[32m2023-06-11 13:15:37[0m [1mGetting the parser mapping with mapping_replacements={'cwd': ''}[0m
+[32m2023-06-11 13:15:37[0m [1mControl pipeline {'control_name': 'snyk_code', 'steps': [{'name': 'Map Results', 'type': 'map', 'mapping': {'filename': '.runs[].results[].locations[].physicalLocation.artifactLocation.uri', 'issue_confidence': '.runs[].results[].level | sub("warning";"MEDIUM") | sub("error";"HIGH") | sub("note";"LOW")', 'issue_severity': '.runs[].results[].level | sub("warning";"MEDIUM") | sub("error";"HIGH") | sub("note";"LOW")', 'issue_text': '.runs[].results[].message.text', 'test_name': '.runs[].results[].ruleId', 'test_id': '.runs[].results[].ruleId', 'code_snippet': '.runs[].results[].message.arguments | join(",")', 'line_range': '.runs[].results[].locations[].physicalLocation.region | [.startLine, .endLine]'}}, {'name': 'Format line_range', 'type': 'format', 'target': 'line_range', 'template': '{{ line_range[0] }}-{{ line_range[-1] }}\n'}]}.[0m
+[32m2023-06-11 13:15:37[0m [31m[1mParsing failed with exception Expecting value: line 1 column 1 (char 0). raw_json=''[0m
+[32m2023-06-11 13:15:37[0m [1mUnified findings:
+[][0m
+[32m2023-06-11 13:15:38[0m [1msnapshot attributes file does not exist[0m
+[32m2023-06-11 13:15:38[0m [1mFound 0 findings[0m
+[32m2023-06-11 13:15:38[0m [1mMetadata: control_name='snyk' command_args='/code' plan_layer='code' vulnerability_type='code_vulnerability' schema_type='code' schema_version='1'[0m
+[32m2023-06-11 13:15:38[0m [1mMetadata: control_name='snyk' command_args='/code' plan_layer='code' vulnerability_type='code_vulnerability' schema_type='code' schema_version='1'[0m
+[32m2023-06-11 13:15:38[0m [1mUploading result based on control_type='detection' with control_result={'control_name': 'snyk', 'findings': [], 'event_type': 'control_results', 'created_at': '2023-06-11T13:15:38.000995', 'status': 'failed', 'plan_layer': 'code', 'vulnerability_type': 'code_vulnerability'}[0m
+[32m2023-06-11 13:15:38[0m [1mWe are running with no back-end so not validating findings[0m
+[32m2023-06-11 13:15:38[0m [1mControl 'snyk' ended with status 'failed'[0m
+[32m2023-06-11 13:15:38[0m [1mSecurity Control Finished without Findings[0m
