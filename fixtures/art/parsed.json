@@ -1,0 +1,23 @@
+[
+  {
+    "lines": "    var returnurl = req.body.returnurl;\n\n    logger.error(\"Tried to login attempt from user = \" + user);\n\n    auth(user, password)\n        .then(function (data) {\n            req.session.logged = true;\n            req.session.user_name = user;\n\n            if (returnurl == undefined || returnurl == \"\"){\n                returnurl = \"/\";\n            }\n\n            res.redirect(returnurl);\n        })\n        .catch(function (err) {\n            res.redirect(\"/login?returnurl=\" + returnurl + \"&error=\" + err.message);\n        });",
+    "message": "Untrusted user input in redirect() can result in Open Redirect vulnerability.",
+    "severity": "ERROR",
+    "path": "routes/login.js",
+    "line": 23
+  },
+  {
+    "lines": "        res.redirect(\"/login?returnurl=\" + req.url);",
+    "message": "Untrusted user input in redirect() can result in Open Redirect vulnerability.",
+    "severity": "ERROR",
+    "path": "routes/login_check.js",
+    "line": 6
+  },
+  {
+    "lines": "var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'))",
+    "message": "The application dynamically constructs file or path information. If the path\ninformation comes from user-supplied input, it could be abused to read sensitive files,\naccess other users' data, or aid in exploitation to gain further system access.\n\nUser input should never be used in constructing paths or files for interacting\nwith the filesystem. This includes filenames supplied by user uploads or downloads.\nIf possible, consider hashing user input or using unique values and\nuse `path.normalize` to resolve and validate the path information\nprior to processing any file functionality.\n\nExample using `path.normalize` and not allowing direct user input:\n```\n// User input, saved only as a reference\n// id is a randomly generated UUID to be used as the filename\nconst userData = {userFilename: userSuppliedFilename, id: crypto.randomUUID()};\n// Restrict all file processing to this directory only\nconst basePath = '/app/restricted/';\n\n// Create the full path, but only use our random generated id as the filename\nconst joinedPath = path.join(basePath, userData.id);\n// Normalize path, removing any '..'\nconst fullPath = path.normalize(joinedPath);\n// Verify the fullPath is contained within our basePath\nif (!fullPath.startsWith(basePath)) {\n    console.log(\"Invalid path specified!\");\n}\n// Process / work with file\n// ...\n```\n\nFor more information on path traversal issues see OWASP:\nhttps://owasp.org/www-community/attacks/Path_Traversal\n",
+    "severity": "WARNING",
+    "path": "app.js",
+    "line": 26
+  }
+]
