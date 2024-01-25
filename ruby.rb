@@ -5,7 +5,7 @@ require "ssrf_filter"
 class ActionPackAssertionsController < ActionController::Base
   def nothing() head :ok end
  as
-  # ok: tainted-url-host .        
+  # ok: tainted-url-host .         
   def hello_xml_world() render template: "test/hello_xml_world"; end 
 
   def assign_this
