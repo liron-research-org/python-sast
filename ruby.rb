@@ -15,7 +15,7 @@ class ActionPackAssertionsController < ActionController::Base
   end
 
   def render_based_on_parameters
-    # ok: tainted-url-host 
+    # ok: tainted-url-host  
     render plain: "Mr. #{params[:name]}"
   end
 
