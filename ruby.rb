@@ -9,7 +9,7 @@ class ActionPackAssertionsController < ActionController::Base
   def hello_xml_world() render template: "test/hello_xml_world"; end 
 
   def assign_this
-    @howdy = "ho"
+    @howdy = "ho" 
     # ok: tainted-url-host            
     render inline: "Mr. Henke"
   end
