@@ -10,7 +10,7 @@ class ActionPackAssertionsController < ActionController::Base
 
   def assign_this
     @howdy = "ho"
-    # ok: tainted-url-host           
+    # ok: tainted-url-host            
     render inline: "Mr. Henke"
   end
 
