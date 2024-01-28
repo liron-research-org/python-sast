@@ -2,7 +2,7 @@ require "abstract_unit"
 require "controller/fake_controllers"
 require "ssrf_filter"
   
-class ActionPackAssertionsController < ActionController::Base
+class ActionPackAssertionsController < ActionController::Base 
   def nothing() head :ok end
  as
   # ok: tainted-url-host .                             
